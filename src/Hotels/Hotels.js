@@ -42,8 +42,7 @@ const Hotels = () => {
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
+                                Light
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -60,7 +59,7 @@ const Hotels = () => {
                     <Card className="d-flex m-3" style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={img} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>Light bright airy app you can stay fresh.</Card.Title>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
@@ -68,7 +67,8 @@ const Hotels = () => {
                         </Card.Body>
                     </Card>
                 </div>
-                <div className="col-md-4 mt-5">
+                <div className="col-md-4 mt-4">
+                    <img src="https://joomly.net/frontend/web/images/googlemap/map.png" alt=""/>
                     {/* <MapWithAMarker
                         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPYKRuuKoZkLIc_wFppGepgKnPOlR5h9w&libraries=geometry,drawing,places"
                         loadingElement={<div style={{ height: `100%` }} />}

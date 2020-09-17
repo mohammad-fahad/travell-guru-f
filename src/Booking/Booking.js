@@ -10,8 +10,7 @@ const Booking = (props) => {
     const { name, details, background } = props.information[id];
     const [startDate, setStartDate] = useState(new Date("2020/01/01"));
     const [endDate, setEndDate] = useState(new Date("2020/02/10"));
-    console.log(props);
-
+    
     // const data = information;
     // data.find(place => place.id === id)
     // console.log(data[id].id)
