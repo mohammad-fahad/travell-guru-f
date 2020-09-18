@@ -8,7 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Login from './Login/Login';
-import SignIn from './SignIn/SignIn';
+
 import Booking from './Booking/Booking';
 import sazek from './Image/Sajek.png';
 import sreemangal from './Image/Sreemongol.png';
@@ -17,6 +17,7 @@ import Hotels from './Hotels/Hotels';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import context from 'react-bootstrap/esm/AccordionContext';
 import "react-datepicker/dist/react-datepicker.css";
+import NoMatch from './NoMatch/NoMatch';
 
 
 
@@ -55,10 +56,7 @@ const [loggedInUser, setLoggedInUser] = useState({});
           </Route>
           <Route path="/login">
             <Login />
-          </Route>
-          <Route path="/signin">
-            <SignIn />
-          </Route>
+          </Route>          
           <Route exact path="/">
             <Home />
           </Route>
@@ -68,6 +66,9 @@ const [loggedInUser, setLoggedInUser] = useState({});
           <PrivateRoute path="/hotels">
             <Hotels  />
           </PrivateRoute>
+          <Route path="*">
+            <NoMatch />
+          </Route>
         </Switch>
       </Router>
       </UserContext.Provider>

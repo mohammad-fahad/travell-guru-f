@@ -60,7 +60,7 @@ export const handleSignOut = () => {
   });
 }
 
-export const createUserEmailAndPassword = ( email, password) => {
+export const createUserWithEmailAndPassword = ( email, password) => {
   console.log(email, password);
   return firebase.auth().createUserWithEmailAndPassword(email, password)
   .then( res => {
