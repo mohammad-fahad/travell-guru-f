@@ -17,7 +17,7 @@ const Booking = (props) => {
     
 
     return (
-        <div>
+        <div className="container-fluid">
             <Header />
             <img className="bg" src={background} alt="" />
             <div className="d-flex">
@@ -29,7 +29,7 @@ const Booking = (props) => {
 
 
                 </div>
-                <div className="col-md-4 form ml-5">
+                <div className="col-md-4 form ml-5 container-fluid">
 
                     <Form className="bg-light p-5">
                         <Form.Group controlId="formBasicOrigin">
@@ -44,7 +44,7 @@ const Booking = (props) => {
                         </Form.Group>
                         <Form.Group className=" d-flex m-5">
                             <p>From</p> <br/>
-                            <DatePicker
+                            <DatePicker className="container-fluid"
                                 selected={startDate}
                                 onChange={date => setStartDate(date)}
                                 selectsStart
@@ -53,7 +53,7 @@ const Booking = (props) => {
                                 endDate={endDate}
                             /> <br />
                             <p>Till</p> <br/>
-                            <DatePicker
+                            <DatePicker className="container-fluid"
                                 selected={endDate}
                                 onChange={date => setEndDate(date)}
                                 selectsEnd

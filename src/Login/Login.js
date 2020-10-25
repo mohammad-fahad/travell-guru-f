@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import * as firebase from "firebase/app";
-
 import "firebase/auth";
 import { useContext } from 'react';
 import { UserContext } from '../App';

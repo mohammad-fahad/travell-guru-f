@@ -4,7 +4,6 @@ import Header from '../Header/Header';
 import sazek from '../Image/Sajek.png';
 import sreemangal from '../Image/Sreemongol.png';
 import sundarban from '../Image/sundorbon.png';
-import background from '../Image/Rectangle 1.png';
 import { Link } from 'react-router-dom';
 
 
@@ -14,14 +13,14 @@ import { Link } from 'react-router-dom';
         name: "Cox's Bazar",
         details: "Cox's Bazar is located 150 km (93 mi) south of the divisional headquarter city of Chittagong. ... The beach in Cox's Bazar has a gentle slope and with an unbroken length of 155 km (96 mi) it is often termed the 'longest natural unbroken sea beach' in the world.",
         img: sazek,
-        background: "https://i.pinimg.com/originals/1c/8a/a8/1c8aa8f0201a754b5a7dfd82ec7b6371.jpg"
+        background: "https://i.ytimg.com/vi/qG3pwvXwvbI/maxresdefault.jpg"
     },
     {
         id: 1,
         name: "Sreemangal",
         details: "Sreemangal is situated in Moulvibazar district in sylhet division. Sreemangal is an Upazila. It is famous for tea garden. Rain all time occurs here. Nature has adorned sreemangal with green tress. Its natural scenery is very charming. It soothes one’s eyes. Birds are twittering always here. The first tea garden in Bangladesh which names “Malni chho ra tea garden” is here. Only one tea research institute in Bangladesh which name is BTRI (Bangladesh Tea Research Institute) is situated in Sreemangal. The terraced tea gardens, plantations and evergreen hills of sreemangal are wonderful treats for the tourists. ",
         img: sreemangal,
-        background:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRROv09xumg6YLiCDrJ7K6B60rWU9GzxMog2Q&usqp=CAU"
+        background:"https://lh3.googleusercontent.com/proxy/Zy11xtwbdX2RhAiCkF-BAwYgbUGVPv0fhejAViBuTyDrVm21m8OONESGOnvOWUgJiX1Md3UdIiaGCNIP-2Ky8vRoXqLouhrpyJjvQ2SiVubFPgd3aiXqsm5P3A"
     },
     {
         id: 2,
@@ -41,10 +40,10 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className="f-flex flex-wrap">
             <Header />
             <img className="bg " src={click.background} alt="" />
-            <div className="d-flex">
+            <div className="d-flex container-fluid">
                 <div className="col-md-5 p-5 ">
                     <h1 style={{fontSize: '70px'}}> {click.name}</h1>
                     <p style={{fontSize: '20px', marginTop: '4px'}}>{click.details}</p>
@@ -53,9 +52,9 @@ const Home = () => {
                     </Link>
                     
                 </div>
-                <div className="col-md-8 m-5" >
+                <div className="col-md-7 ml-2" >
                     {
-                        information.map(info => <img className="image" onClick={() => handleClick(info)}  src={info.img} key={info.id} alt="" />)
+                        information.map(info => <img className="image" onClick={() => handleClick(info)} onLoad={() => handleClick(info)}  src={info.img} key={info.id} alt="" />)
                     }
                     
                 </div>
