@@ -54,7 +54,7 @@ function Login() {
     setUser(res);
     setLoggedInUser(res);
     if (redirect) {
-      history.replace(from);
+      history.push("/hotels");
     }
   }
 
@@ -72,6 +72,7 @@ function Login() {
       const newUserInfo = { ...user };
       newUserInfo[e.target.name] = e.target.value;
       setUser(newUserInfo);
+      
     }
   }
   const handleSubmit = (e) => {
